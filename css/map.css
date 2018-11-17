@@ -1,0 +1,13 @@
+#map {
+    width: 800px;
+    height: 1200px;
+    margin-right: 0px;
+    margin-top: var(--time-label-height);
+    padding: 0;
+}
+#playButtonDiv {
+    width: 800px;
+}
+.marker{
+    position: absolute;
+}

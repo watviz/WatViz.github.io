@@ -1,0 +1,12 @@
+.left{
+    position: absolute;
+    top: var(--margin-top);
+    left: var(--margin-left);
+    width: 800px;
+    overflow: visible;
+}
+.right{
+    position: absolute;
+    top: var(--margin-top);
+    left: calc(var(--map-width) + 2*var(--margin-left));
+}

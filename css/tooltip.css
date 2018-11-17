@@ -1,0 +1,28 @@
+/* tooltip */
+div.tooltip {
+    position: absolute;
+    line-height: 1;
+    padding: 10px;
+    font-size: 14px;
+    font-family: "sans-serif";
+    background: rgba(204, 204, 204, 1.0);
+    color: #000;
+    border-radius: 3px;
+    border: 0.5px solid black;
+    pointer-events: none;
+
+}
+
+div.tooltip table {
+    border: 0px solid #ccc;
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 100%;
+}
+
+div.tooltip td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 1px;
+    background-color: #fff;
+}

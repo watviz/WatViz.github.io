@@ -1,0 +1,57 @@
+/*Adapted from: https://bl.ocks.org/officeofjane/47d2b0bfeecfcb41d2212d06d095c763*/
+#play-button {
+    position: absolute;
+    top: 0px;
+    display: inline;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+}
+.sliderSvg{
+    position: absolute;
+    top: 0px;
+    display: inline;
+    margin-top: 0px;
+}
+#play-button:hover {
+    color: #696969;
+}
+.label{
+    font-size: 10px;
+    background: white;
+}
+.tick {
+    font-size: 10px;
+    color: #dcdcdc;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+    stroke-linecap: round;
+}
+
+.track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+}
+
+.track-inset {
+    stroke: #dcdcdc;
+    stroke-width: 8px;
+}
+
+.track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+    cursor: crosshair;
+}
+
+.handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+}

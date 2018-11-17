@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WatViz</title>
+    <script src="lib/jquery.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>
+        @import "css/globalvariables.css";
+        @import "css/map.css";
+        @import "css/main.css";
+        @import "css/tooltip.css";
+        @import "js/playslider/playslider.css";
+        @import "css/discreteheatmap.css";
+        @import "css/floatingbutton.css";
+        @import "css/floatingBox.css";
+    </style>
+</head>
+<body>
+<div id="controlPanelContainer" class="floatingBox">
+    <div id="controlPanelHeader" class="floatingBoxHeader"><span class="floatingBoxButton" onclick="closeFloatingBox('btnControlPanel', 'controlPanelContainer')">[-]</span> Control panel
+    </div>
+    <div id="controlPanel" class="floatingBoxContent">
+        Aggregate time by:
+        <select onchange="changeTimeAggregation()" id="aggregationSelect">
+        </select>
+        Group by
+        <select onchange="changeGroup()" id="groupSelect"></select>
+        <br/>
+        Group order
+        <select onchange="changeGroupOrder()" id="groupOrderSelect">
+        </select>
+        Well order
+        <select onchange="changeWellOrder()" id="wellOrderSelect">
+        </select>
+    </div>
+</div>
+
+<div id="loadingSpinner"></div>
+
+<div class="left">
+    <div id="map"></div>
+    <div id="playButtonDiv">
+    </div>
+</div>
+<div class="right">
+    <div id="heatmapheader">
+        <svg id="mapHeaderSVG"></svg>
+    </div>
+    <div id="heatmap"></div>
+</div>
+
+<!--section for the buttons-->
+
+<a id="btnControlPanel" class="tab tab_right" style="opacity: 0.0;" onclick="openFloatingBox('btnControlPanel', 'controlPanelContainer')" ><img src="images/tabicon.gif" alt="">Control panel<span class="screen_reader"> Will open a new window</span></a>
+
+<!--Libraries-->
+<script src="lib/spin.min.js"></script>
+<script src="lib/d3.v4.min.js"></script>
+<script src="lib/d3-hsv.v0.1.min.js"></script>
+<script src="lib/d3-contour.v1.min.js"></script>
+<script src="//maps.google.com/maps/api/js?key=AIzaSyAA-YOLIVTWEZLS7316nJfEX3C9FedRkLg"></script>
+
+
+<!--custom code-->
+<script src="js/spinner.js"></script><!--load spinner first-->
+<script src="js/globalvariables.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/util.js"></script>
+<script src="js/recbin.js"></script>
+<script src="js/d3googlemap.js"></script>
+<script src="js/processdata.js"></script>
+<script src="js/colormanager.js"></script>
+<script src="js/map.js"></script>
+<script src="js/playslider/playslider.js"></script>
+<script src="js/discreteheatmap.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/floatingBox.js"></script>
+<script src="js/controlPanel.js"></script>
+</body>
+</html>
